@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/jahn8/greetings-ci/compare/v0.2.0...v0.3.0) (2024-02-14)
+
+
+### Features
+
+* version artifact ([bed0590](https://github.com/jahn8/greetings-ci/commit/bed0590588c71bfda288baef6c30c2b6dba25929))
+
+
+
 # [0.2.0](https://github.com/jahn8/greetings-ci/compare/v0.1.0...v0.2.0) (2024-02-14)
 
 
