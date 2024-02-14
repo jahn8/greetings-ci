@@ -23,6 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Conventional Changelog Action
+      id: changelog
       uses: TriPSs/conventional-changelog-action@v5.2.0
         
     - name: Set up JDK 17
@@ -39,16 +40,9 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
-    # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
-    # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
-    #
-    # - name: Setup Gradle
-    #   uses: gradle/actions/setup-gradle@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3.0.0
-    #   with:
-    #     gradle-version: '8.5'
-    #
-    # - name: Build with Gradle 8.5
-    #   run: gradle build
+    - name: Tag artifact 
+      run: mv build/libs/greetings-ci.jar build/libs/greetings-ci-${{ github.event.inputs.myVersion || steps.changelog.outputs.version }}.jar
+  
     - name: Upload Artifact
       uses: actions/upload-artifact@v4.3.0
       with:
