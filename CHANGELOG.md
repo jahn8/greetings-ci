@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/jahn8/greetings-ci/compare/v0.3.0...v0.4.0) (2024-02-14)
+
+
+### Features
+
+* add testing to pipeline ([a8ee14b](https://github.com/jahn8/greetings-ci/commit/a8ee14bc2c36fcf3e55ee0d0ba8d1962ad9ceb10))
+
+
+
 # [0.3.0](https://github.com/jahn8/greetings-ci/compare/v0.2.0...v0.3.0) (2024-02-14)
 
 
