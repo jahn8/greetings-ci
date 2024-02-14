@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/jahn8/greetings-ci/compare/v0.4.0...v0.4.1) (2024-02-14)
+
+
+### Bug Fixes
+
+* correct upload path ([d45e695](https://github.com/jahn8/greetings-ci/commit/d45e695777de03ac7b1c2d7df0cf7fb964444182))
+
+
+
 # [0.4.0](https://github.com/jahn8/greetings-ci/compare/v0.3.0...v0.4.0) (2024-02-14)
 
 
