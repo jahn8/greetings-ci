@@ -36,6 +36,8 @@ jobs:
     - name: Conventional Changelog Action
       id: changelog
       uses: TriPSs/conventional-changelog-action@v5.2.0
+      with:
+       skip-git-pull: "true"
         
     - name: Set up JDK 17
       uses: actions/setup-java@v4
@@ -67,25 +69,13 @@ jobs:
    needs: build
  
    steps:
-   - name: Download candidate artifacts
-     uses: actions/download-artifact@v4 
-     with:
-       name: greetings-jar
-       
-   - name: Set up JDK 17
-     uses: actions/setup-java@v4
-     with:
-       java-version: '17'
-       distribution: 'temurin'
+   - uses: actions/checkout@v3
  
-   - name: Execute test
-     shell: bash
-     env:
-       ARGS: ${{ github.event.inputs.myValues }}
-
-     run: | 
-       chmod +x ./test-script.sh
-       ./test-script.sh ${{ github.event.inputs.myVersion || needs.build.outputs.artifact-tag }} "$ARGS"
+   - name: run-test
+     uses: ./.github/actions/test-action
+     with:
+       artifact-version: ${{ github.event.inputs.myVersion || needs.build.outputs.artifact-tag }}
+       arguments-to-print: ${{ github.event.inputs.myValues }}
 
   create-issue-on-failure:
 
