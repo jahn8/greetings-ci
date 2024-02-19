@@ -1,3 +1,12 @@
+## [0.7.1](https://github.com/jahn8/greetings-ci/compare/v0.7.0...v0.7.1) (2024-02-19)
+
+
+### Bug Fixes
+
+* address Blue env ([625bd75](https://github.com/jahn8/greetings-ci/commit/625bd755b5abbaf5ac7cf72f3b3149312413d491))
+
+
+
 # [0.7.0](https://github.com/jahn8/greetings-ci/compare/v0.6.0...v0.7.0) (2024-02-19)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * correct upload path ([d45e695](https://github.com/jahn8/greetings-ci/commit/d45e695777de03ac7b1c2d7df0cf7fb964444182))
-
-
-
-# [0.4.0](https://github.com/jahn8/greetings-ci/compare/v0.3.0...v0.4.0) (2024-02-14)
-
-
-### Features
-
-* add testing to pipeline ([a8ee14b](https://github.com/jahn8/greetings-ci/commit/a8ee14bc2c36fcf3e55ee0d0ba8d1962ad9ceb10))
 
 
 
